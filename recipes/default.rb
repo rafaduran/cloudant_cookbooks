@@ -22,6 +22,12 @@ include_recipe "spidermonkey"
 
 case node[:platform]
 when "ubuntu"
+
+  if node.platform_version.to_f == 11.10
+    package "libssl0.9.8" do
+      action :install
+    end
+  end
   
   include_recipe "runit"
   
