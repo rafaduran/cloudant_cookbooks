@@ -18,6 +18,7 @@
 #
 
 include_recipe "libicu"
+include_recipe "libcurl"
 include_recipe "spidermonkey"
 
 case node[:platform]
