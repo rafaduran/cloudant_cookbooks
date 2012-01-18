@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+node.set_unless['bigcouch']['name'] = node['fqdn']
+
 include_recipe "libicu"
 include_recipe "libcurl"
 include_recipe "spidermonkey"
